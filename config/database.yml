@@ -20,6 +20,7 @@ development:
   username: postgres
   password: postgres
 
+
 production:
   adapter: postgresql
   encoding: unicode
