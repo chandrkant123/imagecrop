@@ -19,3 +19,11 @@ development:
   pool: 5
   username: postgres
   password: postgres
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: device_p
+  pool: 5
+  username: postgres
+  password: postgres
