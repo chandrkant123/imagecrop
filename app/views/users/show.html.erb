@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div class="text-center">
+<div class="table-responsive">
+  <table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      
+    
+    
+      <th>Image</th>
+      
+    </tr>
+  </thead>  
+  <tbody>
+  <tr>
+        <td><%= @user.name %></td>
+        <td><%= image_tag @user.avatar.url(:small) ,:class=>"img-responsive img-thumbnail"%></td>
+        <td><%= link_to 'Edit', edit_user_path(@user) ,:class=>"btn btn-primary "%></td>
+        <td><%= link_to 'Back', users_path ,:class=>"btn btn-success" %></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<style type="text/css">
+.table {
+  margin-bottom:20px;
+  width:30%;
+}
+</style>

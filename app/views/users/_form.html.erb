@@ -1,0 +1,30 @@
+<div class="form-horizontal">
+<%= form_for(@user, multipart: true,:class=>"form-horizontal") do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="col-xs-2">
+    <label >Name</label>
+    <%= f.text_field :name,:class=>"form-control outline" %>
+  </div>
+  <div class="col-xs-2">
+    <label >Image</label>
+    <%= f.file_field :avatar,:class=>"form-control outline" %>
+  </div>
+ 
+  <div class="col-xs-3">
+    <%= f.submit :save ,:class=>"btn btn-primary outline"%>
+  </div>
+
+<% end %>
+</div>
